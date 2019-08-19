@@ -1,4 +1,4 @@
-package com.jenson.data.patternsduty.gof;
+package com.jenson.data.patternsduty.gof.builder;
 
 import lombok.ToString;
 
@@ -48,5 +48,41 @@ public class Person {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getJob() {
+        return job;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public String getCompanyAddress() {
+        return companyAddress;
+    }
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 }

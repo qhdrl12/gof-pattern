@@ -1,11 +1,10 @@
 package com.jenson.data.patternsduty;
 
-import com.jenson.data.patternsduty.gof.AmericaPersonBuilder;
-import com.jenson.data.patternsduty.gof.Director;
-import com.jenson.data.patternsduty.gof.KoreaPersonBuilder;
-import com.jenson.data.patternsduty.gof.PersonBuilder;
-import com.jenson.data.patternsduty.normal.Person;
-import com.jenson.data.patternsduty.normal.PersonLombok;
+import com.jenson.data.patternsduty.gof.builder.Director;
+import com.jenson.data.patternsduty.gof.builder.KoreaPersonBuilder;
+import com.jenson.data.patternsduty.gof.builder.PersonBuilder;
+import com.jenson.data.patternsduty.gof.builder.normal.Person;
+import com.jenson.data.patternsduty.gof.builder.normal.PersonLombok;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PatternSdutyApplication {
 
     public static void main(String[] args) {
-        Person person = new Person();
+        Person person = new Person("bongki", "lee");
         Person person2 = new Person("bongki",
                 "lee",
                 "suwonsi",
@@ -51,7 +50,7 @@ public class PatternSdutyApplication {
         Director director = new Director(personBuilder);
         director.constructPerson();
 
-        com.jenson.data.patternsduty.gof.Person person5 = director.getPerson();
+        com.jenson.data.patternsduty.gof.builder.Person person5 = director.getPerson();
 
         log.info("person5 {}", person5);
 

@@ -1,4 +1,4 @@
-package com.jenson.data.patternsduty.gof;
+package com.jenson.data.patternsduty.gof.builder;
 
 public abstract class PersonBuilder {
     protected Person person;

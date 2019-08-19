@@ -1,4 +1,4 @@
-package com.jenson.data.patternsduty.gof;
+package com.jenson.data.patternsduty.gof.builder;
 
 public class AmericaPersonBuilder extends PersonBuilder {
     @Override
@@ -17,32 +17,20 @@ public class AmericaPersonBuilder extends PersonBuilder {
     }
 
     @Override
-    public void buildAge() {
-
-    }
+    public void buildAge() { }
 
     @Override
-    public void buildJob() {
-
-    }
+    public void buildJob() { }
 
     @Override
-    public void buildCompany() {
-
-    }
+    public void buildCompany() { }
 
     @Override
-    public void buildCompanyAddress() {
-
-    }
+    public void buildCompanyAddress() { }
 
     @Override
-    public void buildSalary() {
-
-    }
+    public void buildSalary() { }
 
     @Override
-    public void buildPhoneNumber() {
-
-    }
+    public void buildPhoneNumber() { }
 }
