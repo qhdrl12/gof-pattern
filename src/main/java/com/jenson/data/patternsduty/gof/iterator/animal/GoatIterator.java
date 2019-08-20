@@ -10,16 +10,15 @@ public class GoatIterator implements Iterator {
 
     @Override
     public boolean hasNext() {
-        if (position > goatherd.getGoatNum()) {
-            return false;
-        } else {
+        if (position <= goatherd.getGoatNum()) {
             return true;
+        } else {
+            return false;
         }
     }
 
     @Override
     public Object next() {
-//        System.out.println("next position result " + position);
         Goat goat = this.goatherd.findGoat(position);
         position++;
         return goat;

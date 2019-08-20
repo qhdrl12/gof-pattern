@@ -4,10 +4,10 @@ public class AnimalMain {
 
     public static void main(String[] args) {
         Goatherd goatherd = new Goatherd();
-        Sheepherd sheepherd = new Sheepherd();
+        Shepherd shepherd = new Shepherd();
 
         Iterator goatIter = goatherd.createIterator();
-        Iterator sheepIter = sheepherd.createIterator();
+        Iterator sheepIter = shepherd.createIterator();
 
         while (goatIter.hasNext()) {
             Goat goat = (Goat) goatIter.next();

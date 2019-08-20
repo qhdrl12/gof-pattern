@@ -1,27 +1,26 @@
 package com.jenson.data.patternsduty.gof.iterator.animal;
 
 public class SheepIterator implements Iterator {
-    private Sheep[] sheeps;
+    private Shepherd shepherd;
     private int position = 0;
 
-    public SheepIterator(Sheep[] sheeps) {
-        this.sheeps = sheeps;
+    public SheepIterator(Shepherd shepherd) {
+        this.shepherd = shepherd;
     }
 
     @Override
     public boolean hasNext() {
-        if (position >= sheeps.length || sheeps[position] == null) {
-            return false;
-        } else {
+        if (position <= shepherd.getSheepNum()) {
             return true;
+        } else {
+            return false;
         }
     }
 
     @Override
     public Object next() {
-//        System.out.println("next position result " + position);
-        Sheep tempSheep = sheeps[position];
+        Sheep sheep =  this.shepherd.sheeps[position];
         position++;
-        return tempSheep;
-    }
+        return sheep;
+}
 }

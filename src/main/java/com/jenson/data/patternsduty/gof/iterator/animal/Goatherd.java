@@ -1,7 +1,6 @@
 package com.jenson.data.patternsduty.gof.iterator.animal;
 
-import java.util.HashMap;
-import java.util.OptionalInt;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class Goatherd implements Aggregate {
@@ -22,6 +21,7 @@ public class Goatherd implements Aggregate {
     public int getGoatNum() {
         return goatNum;
     }
+
     public void addGoat() {
         if (GOATS.size() <= MAX_GOATS) {
             GOATS.put(goatNum++, new Goat());
@@ -34,7 +34,5 @@ public class Goatherd implements Aggregate {
 
     public Iterator createIterator() {
         return new GoatIterator(this);
-//        return new GoatIterator(GOATS.keySet());
-//        return (Iterator) GOATS.keySet().iterator();
     }
 }
